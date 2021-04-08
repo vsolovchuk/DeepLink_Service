@@ -4,6 +4,7 @@
   "description": "deeplink fastify jwt servis",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +16,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "fastify": "^3.14.1",
+    "ip": "^1.1.5",
     "jsonwebtoken": "^8.5.1",
     "scripts-dev": "^1.1.0",
     "ua-parser-js": "^0.7.27"

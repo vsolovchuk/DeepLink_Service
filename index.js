@@ -10,6 +10,7 @@ const fastify = require("fastify")({
   },
 });
 const deviceController = require("./controllers/deviceController.js");
+const ip = require("ip");
 
 fastify.get("/", (request, response) => {
   response.send({ hello: "world" });
@@ -17,7 +18,7 @@ fastify.get("/", (request, response) => {
 
 fastify.get("/link", deviceController.getDeepLink);
 
-fastify.listen(3000, "192.168.1.176", (err, address) => {
+fastify.listen(3000, ip.address(), (err, address) => {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
